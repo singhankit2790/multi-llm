@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #09090b;
+  color: #e4e4e7;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.shimmer {
+  background-image: linear-gradient(
+    90deg,
+    #18181b 0%,
+    #27272a 45%,
+    #18181b 90%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.markdown-body {
+  overflow-wrap: break-word;
+}
+
+.markdown-body > :first-child {
+  margin-top: 0;
+}
+
+.markdown-body > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body p,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body pre,
+.markdown-body blockquote {
+  margin: 0.75rem 0;
+}
+
+.markdown-body p {
+  line-height: 1.7;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  margin: 1rem 0 0.4rem;
+  font-weight: 600;
+  color: #fafafa;
+  line-height: 1.35;
+}
+
+.markdown-body h1 {
+  font-size: 1.05rem;
+}
+
+.markdown-body h2 {
+  font-size: 1rem;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-size: 0.95rem;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 1.2rem;
+}
+
+.markdown-body li {
+  margin: 0.28rem 0;
+  line-height: 1.65;
+}
+
+.markdown-body pre {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-wrap: normal;
+  white-space: pre;
+  border-radius: 0.65rem;
+  border: 1px solid #27272a;
+  background: #09090b;
+  padding: 0.85rem 0.95rem;
+}
+
+.markdown-body :not(pre) > code {
+  border-radius: 0.3rem;
+  border: 1px solid #27272a;
+  background: #18181b;
+  padding: 0.08rem 0.32rem;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.8125rem;
+}
+
+.markdown-body pre code {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body a {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.markdown-body blockquote {
+  border-left: 2px solid #3f3f46;
+  padding-left: 0.8rem;
+  color: #a1a1aa;
+}
